@@ -1,40 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 * {
   margin: 0;
 }
 
-p, h1, h2, h3, h4 {
+p,
+h1,
+h2,
+h3,
+h4 {
   margin: 0;
 }
 
-header nav {
+nav {
   width: 100%;
   height: 11vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header nav div {
+nav div {
   display: flex;
   gap: 22px;
   height: -moz-fit-content;
   height: fit-content;
   align-items: center;
 }
-header nav div button {
-  height: -moz-fit-content;
-  height: fit-content;
-  display: flex;
-  align-items: center;
-  border: none;
-  background-color: transparent;
-}
-header nav div .download_button {
+nav div .download_button {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   color: #4f4f4f;
 }
-header nav div .submit_button {
+nav div .submit_button {
   background: linear-gradient(97.12deg, #0028d0 1.93%, #ee2631 53.52%, #fbd240 100%);
   border-radius: 50px;
   font-style: normal;
@@ -45,7 +42,7 @@ header nav div .submit_button {
   color: #ffffff;
   padding: 10px 20px;
 }
-header nav div .login_button {
+nav div .login_button {
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -58,4 +55,169 @@ header nav div .login_button {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+header .banner {
+  background: url("/assets/images/banner.svg");
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 30px;
+}
+header .mobile_content {
+  display: none;
+}
+
+.banner_content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.banner_content h2 {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 48px;
+  color: #ffffff;
+}
+.banner_content .icons_section {
+  display: flex;
+  height: -moz-fit-content;
+  height: fit-content;
+  align-items: end;
+}
+.banner_content .icons_section img {
+  margin-left: 2px;
+}
+.banner_content .icons_section p {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  color: #ffffff;
+  margin-left: 12px;
+}
+.banner_content p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.banner_section {
+  height: 615px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 50px;
+}
+
+.btn_ {
+  border: none;
+  background-color: transparent;
+}
+
+.banner_buttons {
+  display: flex;
+}
+
+.gohighr_btn {
+  background: #ee2631;
+  border-radius: 50px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.253657px;
+  text-transform: capitalize;
+  color: #ffffff;
+  padding: 10px 20px;
+}
+
+.red_btn {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0.226411px;
+  text-transform: capitalize;
+  color: #ee2631;
+  display: flex;
+  height: -moz-fit-content;
+  height: fit-content;
+  align-items: center;
+  gap: 3.5px;
+}
+
+@media (max-width: 730px) {
+  nav div .submit_button {
+    font-size: 14px;
+    padding: 7px 15px;
+  }
+  header .banner {
+    background: url("/assets/images/banner_mobile.svg");
+    height: 508px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+  }
+  header .mobile_content {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+  }
+  header .mobile_content p {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    text-align: center;
+    color: #4f4f4f;
+  }
+  .banner_content {
+    gap: 25px;
+  }
+  .banner_content h2 {
+    font-size: 28px;
+  }
+  .banner_content .icons_section {
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+  }
+  .banner_content .icons_section .icons img {
+    margin-left: 5px;
+  }
+  .banner_content .icons_section p {
+    font-size: 16px;
+    display: flex;
+    margin-left: 5px;
+  }
+  .banner_content p {
+    display: none;
+  }
+  .banner_section {
+    height: 508px;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 3vh;
+  }
+  .banner_buttons {
+    display: none;
+  }
+  .gohighr_btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  .red_btn {
+    font-size: 24px;
+    gap: 3.5px;
+  }
 }/*# sourceMappingURL=styles.css.map */
