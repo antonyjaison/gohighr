@@ -149,6 +149,116 @@ header .mobile_content {
   gap: 3.5px;
 }
 
+.about_card, .about_section div :nth-child(3) div, .about_section div :nth-child(2) div, .about_section div :first-child div {
+  border-radius: 30px;
+  width: 100%;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about_card_default_props, .about_section div :nth-child(2) div, .about_section div :first-child div {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+.about_card_default_props h2, .about_section div :nth-child(2) div h2, .about_section div :first-child div h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 25px;
+  text-align: center;
+  color: #fff5e7;
+}
+.about_card_default_props p, .about_section div :nth-child(2) div p, .about_section div :first-child div p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 18px;
+  text-align: center;
+  color: #f2f2f2;
+}
+
+.about_section div :first-child div {
+  background-color: #f9c146;
+}
+.about_section div :first-child div .line {
+  background-color: #fff;
+  width: 60%;
+  height: 1px;
+}
+.about_section div :first-child div div {
+  display: flex;
+  flex-direction: row;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+  color: #fff5e7;
+}
+.about_section div :first-child div div h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 35px;
+}
+.about_section div :first-child div div h3 span {
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 45px;
+}
+.about_section div :nth-child(2) div {
+  background-color: #2f80ed;
+}
+.about_section div :nth-child(2) div .line {
+  background-color: #fff;
+  width: 60%;
+  height: 1px;
+}
+.about_section div :nth-child(3) div {
+  gap: 25px;
+  justify-content: center;
+  border: 1px solid #eb5757;
+}
+.about_section div :nth-child(3) div p {
+  width: 90%;
+  font-size: 20px;
+  color: #1b0330;
+}
+
+.about_course_section {
+  margin-top: 180px;
+}
+.about_course_section div .about_course_section_content {
+  height: 327px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+.about_course_section div .about_course_section_content h1 {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 68px;
+  color: #eb5757;
+}
+.about_course_section div .about_course_section_content p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #4f4f4f;
+}
+.about_course_section div div img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 @media (max-width: 730px) {
   nav div .submit_button {
     font-size: 14px;
@@ -219,5 +329,71 @@ header .mobile_content {
   .red_btn {
     font-size: 24px;
     gap: 3.5px;
+  }
+  .about_card, .about_section div :first-child div, .about_section div :nth-child(2) div, .about_section div :nth-child(3) div {
+    height: 190px;
+  }
+  .about_card_default_props, .about_section div :first-child div, .about_section div :nth-child(2) div {
+    gap: 10px;
+    justify-content: center;
+  }
+  .about_card_default_props h2, .about_section div :first-child div h2, .about_section div :nth-child(2) div h2 {
+    font-size: 20px;
+  }
+  .about_card_default_props p, .about_section div :first-child div p, .about_section div :nth-child(2) div p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .about_section div :first-child div {
+    background-color: #f9c146;
+  }
+  .about_section div :first-child div .line {
+    background-color: #fff;
+    width: 60%;
+    height: 2px;
+  }
+  .about_section div :first-child div div h3 {
+    font-size: 16px;
+  }
+  .about_section div :first-child div div h3 span {
+    font-size: 24px;
+  }
+  .about_section div :nth-child(2) div {
+    height: 250px;
+    background-color: #2f80ed;
+  }
+  .about_section div :nth-child(2) div .line {
+    background-color: #fff;
+    width: 60%;
+    height: 1px;
+  }
+  .about_section div :nth-child(3) div {
+    height: 250px;
+    gap: 20px;
+    padding: 10px;
+  }
+  .about_section div :nth-child(3) div p {
+    width: 100%;
+    font-size: 14px;
+  }
+  .about_course_section {
+    margin-top: 100px;
+  }
+  .about_course_section div .about_course_section_content {
+    height: -moz-fit-content;
+    height: fit-content;
+    text-align: center;
+  }
+  .about_course_section div .about_course_section_content h1 {
+    font-size: 28px;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .about_course_section div .about_course_section_content p {
+    font-size: 14px;
+    line-height: 130%;
+  }
+  .about_course_section div div img {
+    margin-top: 25px;
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -83,7 +83,7 @@ header {
   .mobile_content {
     display: none;
   }
-}   
+}
 
 .banner_content {
   display: flex;
@@ -126,10 +126,9 @@ header {
   justify-content: space-around;
   margin-left: 50px;
 }
-.btn_{
+.btn_ {
   border: none;
   background-color: transparent;
-  /* thus is a puyh! */
 }
 
 .banner_buttons {
@@ -158,6 +157,134 @@ header {
   height: fit-content;
   align-items: center;
   gap: 3.5px;
+}
+
+// about section
+.about_card {
+  border-radius: 30px;
+  width: 100%;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about_card_default_props {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 25px;
+    text-align: center;
+    color: #fff5e7;
+  }
+  p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 18px;
+    text-align: center;
+    color: #f2f2f2;
+  }
+}
+.about_section {
+  div {
+    :first-child {
+      div {
+        @extend .about_card;
+        @extend .about_card_default_props;
+        background-color: #f9c146;
+        .line {
+          background-color: #fff;
+          width: 60%;
+          height: 1px;
+        }
+        div {
+          display: flex;
+          flex-direction: row;
+          height: fit-content;
+          text-align: center;
+          color: #fff5e7;
+          h3 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 35px;
+            span {
+              font-weight: 900;
+              font-size: 40px;
+              line-height: 45px;
+            }
+          }
+        }
+      }
+    }
+    :nth-child(2) {
+      div {
+        @extend .about_card;
+        @extend .about_card_default_props;
+        background-color: #2f80ed;
+        .line {
+          background-color: #fff;
+          width: 60%;
+          height: 1px;
+        }
+      }
+    }
+    :nth-child(3) {
+      div {
+        @extend .about_card;
+        gap: 25px;
+        justify-content: center;
+        border: 1px solid #eb5757;
+        p {
+          width: 90%;
+          font-size: 20px;
+          color: #1b0330;
+        }
+      }
+    }
+  }
+}
+
+// about course section
+.about_course_section {
+  margin-top: 180px;
+  div {
+    .about_course_section_content {
+      height: 327px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 15px;
+      h1 {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 68px;
+        color: #eb5757;
+      }
+      p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 32px;
+        display: flex;
+        align-items: center;
+        text-transform: capitalize;
+        color: #4f4f4f;
+      }
+    }
+    div {
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
 }
 
 @media (max-width: 730px) {
@@ -242,5 +369,92 @@ header {
   .red_btn {
     font-size: 24px;
     gap: 3.5px;
+  }
+
+  .about_card {
+    height: 190px;
+  }
+
+  .about_card_default_props {
+    gap: 10px;
+    justify-content: center;
+    h2 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+  .about_section {
+    div {
+      :first-child {
+        div {
+          @extend .about_card;
+          @extend .about_card_default_props;
+          background-color: #f9c146;
+          .line {
+            background-color: #fff;
+            width: 60%;
+            height: 2px;
+          }
+          div {
+            h3 {
+              font-size: 16px;
+              span {
+                font-size: 24px;
+              }
+            }
+          }
+        }
+      }
+      :nth-child(2) {
+        div {
+          @extend .about_card;
+          @extend .about_card_default_props;
+          height: 250px;
+          background-color: #2f80ed;
+          .line {
+            background-color: #fff;
+            width: 60%;
+            height: 1px;
+          }
+        }
+      }
+      :nth-child(3) {
+        div {
+          @extend .about_card;
+          height: 250px;
+          gap: 20px;
+          padding: 10px;
+          p {
+            width: 100%;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .about_course_section {
+    margin-top: 100px;
+    div {
+      .about_course_section_content {
+        height: fit-content;
+        text-align: center;
+        h1 {
+          font-size: 28px;
+          height: fit-content;
+        }
+        p {
+          font-size: 14px;
+          line-height: 130%;
+        }
+      }
+      div {
+        img {
+          margin-top: 25px;
+        }
+      }
+    }
   }
 }
