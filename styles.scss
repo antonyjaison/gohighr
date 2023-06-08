@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope&family=Roboto:wght@500&display=swap");
 * {
   margin: 0;
 }
@@ -287,6 +287,77 @@ header {
   }
 }
 
+.addon_course_section {
+  margin-top: 70px;
+  div {
+    .addon_course_section_content {
+      height: 445px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 15px;
+      align-items: start;
+
+      h1 {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 68px;
+        color: #f9c146;
+      }
+      p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 32px;
+        display: flex;
+        align-items: center;
+        text-transform: capitalize;
+        color: #4f4f4f;
+      }
+    }
+    .addonn_img_section {
+      display: flex;
+      justify-content: end;
+      .addonn_img {
+        height: 445px;
+        object-fit: contain;
+      }
+    }
+  }
+  .mobile_button {
+    display: none;
+  }
+}
+// course details
+.course_details_content {
+  width: 100%;
+  height: 325px;
+  background: #ffebbf;
+  border: 1px solid #ffde97;
+  border-radius: 19px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 45px;
+  h1 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 100%;
+    color: #f47066;
+  }
+  p {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    text-transform: capitalize;
+    color: #7b5a11;
+  }
+}
+
 @media (max-width: 730px) {
   nav {
     div {
@@ -453,8 +524,54 @@ header {
       div {
         img {
           margin-top: 25px;
+          margin-bottom: 25px;
         }
       }
+    }
+  }
+
+  // course details
+  .course_details_content {
+    height: 220px;
+    padding: 30px;
+    gap: 10px;
+    h1 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .addon_course_section {
+    margin-top: 80px;
+    div {
+      .addon_course_section_content {
+        height: 327px;
+        gap: 0px;
+        h1 {
+          font-size: 20px;
+        }
+        p {
+          font-size: 14px;
+          line-height: 17px;
+        }
+        button {
+          display: none;
+        }
+      }
+      .addonn_img_section {
+        .addonn_img {
+          height: 327px;
+          width: 100%;
+        }
+      }
+    }
+    .mobile_button {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin-top: 22px;
     }
   }
 }
