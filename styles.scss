@@ -358,6 +358,82 @@ header {
   }
 }
 
+// module section
+.module_section {
+  margin-top: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 43px;
+  h1 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #eb5757;
+  }
+  .module_cards {
+    margin-bottom: 300px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+    .module_card {
+      padding: 35px;
+      width: 30%;
+      height: 173px;
+      border: 1px solid #ffde97;
+      filter: drop-shadow(0px 183px 73px rgba(78, 45, 0, 0.01))
+        drop-shadow(0px 103px 62px rgba(78, 45, 0, 0.03))
+        drop-shadow(0px 46px 46px rgba(78, 45, 0, 0.05))
+        drop-shadow(0px 11px 25px rgba(78, 45, 0, 0.06))
+        drop-shadow(0px 0px 0px rgba(78, 45, 0, 0.06));
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      justify-content: center;
+      .module_heading {
+        display: flex;
+        justify-content: space-between;
+        h2 {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 31px;
+          text-transform: capitalize;
+          color: #828282;
+        }
+        .dur {
+          display: flex;
+          height: fit-content;
+          align-items: center;
+          gap: 4px;
+          img {
+            margin-top: 2px;
+          }
+          h3 {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 100%;
+            color: #828282;
+          }
+        }
+      }
+      h1 {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 100%;
+        color: #f47066;
+      }
+    }
+  }
+}
+
 @media (max-width: 730px) {
   nav {
     div {
@@ -572,6 +648,49 @@ header {
       width: 100%;
       justify-content: center;
       margin-top: 22px;
+    }
+  }
+
+  // module section
+  .module_section {
+    margin-top: 80px;
+    gap: 30px;
+    // display: flex;
+    // flex-direction: column;
+    h1 {
+      font-size: 28px;
+      line-height: 120%;
+    }
+    .module_cards {
+      gap: 10px;
+      .module_card {
+        width: 48%;
+        height: 105px;
+        padding: 20px 17px;
+        border-radius: 10px;
+        gap: 13px;
+        .module_heading {
+          h2 {
+            font-size: 14px;
+            line-height: 31px;
+          }
+          .dur {
+            display: flex;
+            height: fit-content;
+            align-items: center;
+            gap: 4px;
+            img {
+              margin-top: 2px;
+            }
+            h3 {
+              font-size: 14px;
+            }
+          }
+        }
+        h1 {
+          font-size: 16px;
+        }
+      }
     }
   }
 }
