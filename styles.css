@@ -21,7 +21,6 @@ nav {
 nav div {
   display: flex;
   gap: 22px;
-  height: -moz-fit-content;
   height: fit-content;
   align-items: center;
 }
@@ -60,7 +59,6 @@ nav div .login_button {
 header .banner {
   background: url("/assets/images/banner.svg");
   width: 100%;
-  height: -moz-fit-content;
   height: fit-content;
   background-size: contain;
   background-position: center;
@@ -84,7 +82,6 @@ header .mobile_content {
 }
 .banner_content .icons_section {
   display: flex;
-  height: -moz-fit-content;
   height: fit-content;
   align-items: end;
 }
@@ -143,7 +140,6 @@ header .mobile_content {
   text-transform: capitalize;
   color: #ee2631;
   display: flex;
-  height: -moz-fit-content;
   height: fit-content;
   align-items: center;
   gap: 3.5px;
@@ -191,7 +187,6 @@ header .mobile_content {
 .about_section div :first-child div div {
   display: flex;
   flex-direction: row;
-  height: -moz-fit-content;
   height: fit-content;
   text-align: center;
   color: #fff5e7;
@@ -255,8 +250,7 @@ header .mobile_content {
 }
 .about_course_section div div img {
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .addon_course_section {
@@ -293,8 +287,7 @@ header .mobile_content {
 }
 .addon_course_section div .addonn_img_section .addonn_img {
   height: 445px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .addon_course_section .mobile_button {
   display: none;
@@ -377,7 +370,6 @@ header .mobile_content {
 }
 .module_section .module_cards .module_card .module_heading .dur {
   display: flex;
-  height: -moz-fit-content;
   height: fit-content;
   align-items: center;
   gap: 4px;
@@ -398,6 +390,82 @@ header .mobile_content {
   font-size: 32px;
   line-height: 100%;
   color: #f47066;
+}
+
+.sub_hero {
+  background: url("assets/images/illustration_3.svg");
+  background-color: #27AE60;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  padding: 2vw 10vw;
+}
+.sub_hero div {
+  font-family: "Roboto";
+  font-weight: 900;
+  font-style: normal;
+  font-size: 3em;
+  color: #fff;
+  text-align: center;
+  padding: 1vw 0vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sub_hero div > button {
+  font-family: "Manrope";
+  width: max(20vw, 15rem);
+  padding: 1.2rem;
+}
+
+.technologies {
+  margin-top: 10vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.technologies .header {
+  font-family: "Roboto";
+  font-weight: 900;
+  font-style: normal;
+  font-size: 3em;
+  color: #27AE60;
+}
+.technologies .tech_cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2vw;
+  margin-top: 5vh;
+}
+.technologies .tech_cards .card {
+  width: max(5vw, 5em);
+  height: max(5vw, 5em);
+  background-color: #27AE60;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.technologies .tech_cards .card img {
+  width: 50%;
+  height: 50%;
+}
+.technologies .more_info {
+  font-family: "Roboto";
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1.8em;
+  color: rgb(79, 79, 79);
+  margin: 5vh;
+}
+.technologies div button {
+  font-family: "Manrope";
+  width: max(20vw, 15rem);
+  padding: 1.2rem;
 }
 
 @media (max-width: 730px) {
@@ -521,13 +589,11 @@ header .mobile_content {
     margin-top: 100px;
   }
   .about_course_section div .about_course_section_content {
-    height: -moz-fit-content;
     height: fit-content;
     text-align: center;
   }
   .about_course_section div .about_course_section_content h1 {
     font-size: 28px;
-    height: -moz-fit-content;
     height: fit-content;
   }
   .about_course_section div .about_course_section_content p {
@@ -600,7 +666,6 @@ header .mobile_content {
   }
   .module_section .module_cards .module_card .module_heading .dur {
     display: flex;
-    height: -moz-fit-content;
     height: fit-content;
     align-items: center;
     gap: 4px;
@@ -614,4 +679,6 @@ header .mobile_content {
   .module_section .module_cards .module_card h1 {
     font-size: 16px;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/*# sourceMappingURL=styles.css.map */
