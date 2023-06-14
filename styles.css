@@ -344,7 +344,6 @@ header .mobile_content {
   color: #eb5757;
 }
 .module_section .module_cards {
-  margin-bottom: 300px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
