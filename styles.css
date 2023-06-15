@@ -401,7 +401,7 @@ header .mobile_content {
 
 .sub_hero {
   background: url("assets/images/illustration_3.svg");
-  background-color: #27AE60;
+  background-color: #27ae60;
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -439,7 +439,7 @@ header .mobile_content {
   font-weight: 900;
   font-style: normal;
   font-size: 3em;
-  color: #27AE60;
+  color: #27ae60;
 }
 .technologies .tech_cards {
   display: flex;
@@ -451,7 +451,7 @@ header .mobile_content {
 .technologies .tech_cards .card {
   width: max(5vw, 5em);
   height: max(5vw, 5em);
-  background-color: #27AE60;
+  background-color: #27ae60;
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -473,6 +473,92 @@ header .mobile_content {
   font-family: "Manrope";
   width: max(20vw, 15rem);
   padding: 1.2rem;
+}
+
+.curriculum {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+.curriculum h1 {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #2f80ed;
+}
+.curriculum .curriculum_card {
+  margin-top: 20px;
+}
+.curriculum .curriculum_card .curriculum_img img {
+  text-align: end;
+  width: 100%;
+}
+.curriculum .curriculum_card .curriculum_text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+}
+
+.curriculum_heading h1 {
+  text-align: left;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 28px;
+  color: #bdbdbd;
+}
+.curriculum_heading h1 span {
+  font-weight: 600;
+  font-size: 32px;
+  color: #2f80ed;
+}
+
+.curriculum_para {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  color: #000000;
+}
+
+.certificate_section {
+  margin-top: 180px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 80px;
+}
+.certificate_section img {
+  width: 100%;
+}
+.certificate_section .text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+.certificate_section .text h1 {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 48px;
+  color: #f9c146;
+}
+.certificate_section .text p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #4f4f4f;
+  max-width: 666px;
 }
 
 @media (max-width: 730px) {
@@ -688,5 +774,47 @@ header .mobile_content {
   }
   .module_section .module_cards .module_card h1 {
     font-size: 16px;
+  }
+  .curriculum {
+    gap: 40px;
+  }
+  .curriculum h1 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .curriculum .curriculum_card {
+    margin-top: 0px;
+  }
+  .curriculum .curriculum_card .curriculum_text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+  }
+  .curriculum_heading h1 {
+    text-align: center;
+    font-size: 32px;
+    line-height: 20px;
+  }
+  .curriculum_heading h1 span {
+    font-size: 20px;
+  }
+  .curriculum_para {
+    font-size: 14px;
+    text-align: center;
+  }
+  .certificate_section {
+    margin-top: 80px;
+    gap: 40px;
+  }
+  .certificate_section .text {
+    gap: 15px;
+  }
+  .certificate_section .text h1 {
+    font-size: 28px;
+  }
+  .certificate_section .text p {
+    font-size: 14px;
+    line-height: 17px;
   }
 }/*# sourceMappingURL=styles.css.map */

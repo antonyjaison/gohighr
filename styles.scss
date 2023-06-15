@@ -432,19 +432,19 @@ header {
     }
   }
 }
-.sub_hero{
+.sub_hero {
   background: url("assets/images/illustration_3.svg");
-  background-color: #27AE60;
+  background-color: #27ae60;
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
   border-radius: 20px;
-  padding: 2vw 10vw ;
-  
-  div{
+  padding: 2vw 10vw;
+
+  div {
     font-family: "Roboto";
     font-weight: 900;
-    font-style :normal;
+    font-style: normal;
     font-size: 3em;
     color: #fff;
     text-align: center;
@@ -454,14 +454,14 @@ header {
     align-items: center;
   }
 
-  div > button{
+  div > button {
     font-family: "Manrope";
     width: max(20vw, 15rem);
     padding: 1.2rem;
   }
 }
 
-.technologies{
+.technologies {
   margin-top: 10vh;
   text-align: center;
   display: flex;
@@ -469,53 +469,142 @@ header {
   justify-content: center;
   align-items: center;
 
-  .header{
+  .header {
     font-family: "Roboto";
     font-weight: 900;
-    font-style :normal;
+    font-style: normal;
     font-size: 3em;
-    color: #27AE60;
+    color: #27ae60;
   }
 
-  .tech_cards{
+  .tech_cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2vw;
     margin-top: 5vh;
 
-    .card{
+    .card {
       width: max(5vw, 5em);
       height: max(5vw, 5em);
-      background-color: #27AE60;
+      background-color: #27ae60;
       border-radius: 20px;
       display: flex;
       justify-content: center;
       align-items: center;
 
-      img{
+      img {
         width: 50%;
         height: 50%;
       }
     }
   }
-  .more_info{
+  .more_info {
     font-family: "Roboto";
     font-weight: 900;
-    font-style :normal;
+    font-style: normal;
     font-size: 1.8em;
     color: rgba(79, 79, 79, 1);
     margin: 5vh;
   }
   div {
-    button{
-    font-family: "Manrope";
-    width: max(20vw, 15rem);
-    padding: 1.2rem;
+    button {
+      font-family: "Manrope";
+      width: max(20vw, 15rem);
+      padding: 1.2rem;
+    }
   }
 }
-}
 
+.curriculum {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+
+  h1 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #2f80ed;
+  }
+  .curriculum_card {
+    margin-top: 20px;
+    .curriculum_img {
+      img {
+        text-align: end;
+        width: 100%;
+      }
+    }
+    .curriculum_text {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      justify-content: center;
+    }
+  }
+}
+.curriculum_heading {
+  h1 {
+    text-align: left;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 28px;
+    color: #bdbdbd;
+    span {
+      font-weight: 600;
+      font-size: 32px;
+      color: #2f80ed;
+    }
+  }
+}
+.curriculum_para {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  color: #000000;
+}
+.certificate_section {
+  margin-top: 180px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 80px;
+  img{
+    width: 100%;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    text-align: center;
+    h1 {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 40px;
+      line-height: 48px;
+      color: #f9c146;
+    }
+    p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      color: #4f4f4f;
+      max-width: 666px;
+    }
+  }
+}
 @media (max-width: 730px) {
   nav {
     div {
@@ -770,6 +859,52 @@ header {
         h1 {
           font-size: 16px;
         }
+      }
+    }
+  }
+
+  .curriculum {
+    gap: 40px;
+    h1 {
+      font-size: 28px;
+      line-height: 34px;
+    }
+    .curriculum_card {
+      margin-top: 0px;
+      .curriculum_text {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        justify-content: center;
+      }
+    }
+  }
+  .curriculum_heading {
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      line-height: 20px;
+      span {
+        font-size: 20px;
+      }
+    }
+  }
+  .curriculum_para {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .certificate_section {
+    margin-top: 80px;
+    gap: 40px;
+    .text {
+      gap: 15px;
+        h1 {
+        font-size: 28px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 17px;
       }
     }
   }
