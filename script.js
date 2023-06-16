@@ -10,4 +10,22 @@ function changeImageSource() {
   // Call the function on page load and whenever the window is resized
   window.onload = changeImageSource;
   window.onresize = changeImageSource;
-  
+
+
+// For FAQ Section
+
+const items = document.querySelectorAll(".accordion button");
+
+function toggleAccordion() {
+  const itemToggle = this.getAttribute('aria-expanded');
+
+  for (i = 0; i < items.length; i++) {
+    items[i].setAttribute('aria-expanded', 'false');
+  }
+
+  if (itemToggle == 'false') {
+    this.setAttribute('aria-expanded', 'true');
+  }
+}
+
+items.forEach(item => item.addEventListener('click', toggleAccordion));

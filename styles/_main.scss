@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope&family=Roboto:wght@500&display=swap");
+
 * {
   margin: 0;
 }
+
 p,
 h1,
 h2,
@@ -9,30 +11,32 @@ h3,
 h4 {
   margin: 0;
 }
+
 nav {
   width: 100%;
   height: 11vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   div {
     display: flex;
     gap: 22px;
     height: fit-content;
     align-items: center;
+
     .download_button {
       font-style: normal;
       font-weight: 500;
       font-size: 16px;
       color: #4f4f4f;
     }
+
     .submit_button {
-      background: linear-gradient(
-        97.12deg,
-        #0028d0 1.93%,
-        #ee2631 53.52%,
-        #fbd240 100%
-      );
+      background: linear-gradient(97.12deg,
+          #0028d0 1.93%,
+          #ee2631 53.52%,
+          #fbd240 100%);
       border-radius: 50px;
       font-style: normal;
       font-weight: 700;
@@ -42,27 +46,23 @@ nav {
       color: #ffffff;
       padding: 10px 20px;
     }
+
     .login_button {
       font-style: normal;
       font-weight: 700;
       font-size: 16px;
       letter-spacing: 0.253657px;
       text-transform: capitalize;
-      border: 1px solid
-        linear-gradient(
-          96.86deg,
+      border: 1px solid linear-gradient(96.86deg,
           #0075ff -5.29%,
           #ee2631 49.29%,
-          #fbd240 98.46%
-        );
+          #fbd240 98.46%);
       border-radius: 50px;
       padding: 10px 20px;
-      background: linear-gradient(
-        96.86deg,
-        #0075ff -5.29%,
-        #ee2631 49.29%,
-        #fbd240 98.46%
-      );
+      background: linear-gradient(96.86deg,
+          #0075ff -5.29%,
+          #ee2631 49.29%,
+          #fbd240 98.46%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -80,6 +80,7 @@ header {
     background-repeat: no-repeat;
     padding: 30px;
   }
+
   .mobile_content {
     display: none;
   }
@@ -89,19 +90,23 @@ header {
   display: flex;
   flex-direction: column;
   gap: 40px;
+
   h2 {
     font-style: normal;
     font-weight: 900;
     font-size: 48px;
     color: #ffffff;
   }
+
   .icons_section {
     display: flex;
     height: fit-content;
     align-items: end;
+
     img {
       margin-left: 2px;
     }
+
     p {
       font-style: normal;
       font-weight: 900;
@@ -110,6 +115,7 @@ header {
       margin-left: 12px;
     }
   }
+
   p {
     font-family: "Roboto";
     font-style: normal;
@@ -126,6 +132,7 @@ header {
   justify-content: space-around;
   margin-left: 50px;
 }
+
 .btn_ {
   border: none;
   background-color: transparent;
@@ -146,6 +153,7 @@ header {
   color: #ffffff;
   padding: 10px 20px;
 }
+
 .red_btn {
   font-style: normal;
   font-weight: 700;
@@ -173,6 +181,7 @@ header {
   display: flex;
   gap: 25px;
   justify-content: center;
+
   h2 {
     font-style: normal;
     font-weight: 700;
@@ -181,6 +190,7 @@ header {
     text-align: center;
     color: #fff5e7;
   }
+
   p {
     font-style: normal;
     font-weight: 400;
@@ -190,6 +200,7 @@ header {
     color: #f2f2f2;
   }
 }
+
 .about_section {
   div {
     :first-child {
@@ -197,22 +208,26 @@ header {
         @extend .about_card;
         @extend .about_card_default_props;
         background-color: #f9c146;
+
         .line {
           background-color: #fff;
           width: 60%;
           height: 1px;
         }
+
         div {
           display: flex;
           flex-direction: row;
           height: fit-content;
           text-align: center;
           color: #fff5e7;
+
           h3 {
             font-style: normal;
             font-weight: 700;
             font-size: 24px;
             line-height: 35px;
+
             span {
               font-weight: 900;
               font-size: 40px;
@@ -222,11 +237,13 @@ header {
         }
       }
     }
+
     :nth-child(2) {
       div {
         @extend .about_card;
         @extend .about_card_default_props;
         background-color: #2f80ed;
+
         .line {
           background-color: #fff;
           width: 60%;
@@ -234,12 +251,14 @@ header {
         }
       }
     }
+
     :nth-child(3) {
       div {
         @extend .about_card;
         gap: 25px;
         justify-content: center;
         border: 1px solid #eb5757;
+
         p {
           width: 90%;
           font-size: 20px;
@@ -253,6 +272,7 @@ header {
 // about course section
 .about_course_section {
   margin-top: 180px;
+
   div {
     .about_course_section_content {
       height: 327px;
@@ -260,6 +280,7 @@ header {
       flex-direction: column;
       justify-content: center;
       gap: 15px;
+
       h1 {
         font-style: normal;
         font-weight: 900;
@@ -267,6 +288,7 @@ header {
         line-height: 68px;
         color: #eb5757;
       }
+
       p {
         font-style: normal;
         font-weight: 400;
@@ -278,6 +300,7 @@ header {
         color: #4f4f4f;
       }
     }
+
     div {
       img {
         width: 100%;
@@ -289,6 +312,7 @@ header {
 
 .addon_course_section {
   margin-top: 70px;
+
   div {
     .addon_course_section_content {
       height: 445px;
@@ -305,6 +329,7 @@ header {
         line-height: 68px;
         color: #f9c146;
       }
+
       p {
         font-style: normal;
         font-weight: 400;
@@ -316,19 +341,23 @@ header {
         color: #4f4f4f;
       }
     }
+
     .addonn_img_section {
       display: flex;
       justify-content: end;
+
       .addonn_img {
         height: 445px;
         object-fit: contain;
       }
     }
   }
+
   .mobile_button {
     display: none;
   }
 }
+
 // course details
 .course_details_content {
   width: 100%;
@@ -340,6 +369,7 @@ header {
   flex-direction: column;
   justify-content: space-evenly;
   padding: 45px;
+
   h1 {
     font-style: normal;
     font-weight: 900;
@@ -347,6 +377,7 @@ header {
     line-height: 100%;
     color: #f47066;
   }
+
   p {
     font-family: "Manrope";
     font-style: normal;
@@ -364,6 +395,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 43px;
+
   h1 {
     font-style: normal;
     font-weight: 900;
@@ -373,30 +405,30 @@ header {
     text-transform: capitalize;
     color: #eb5757;
   }
+
   .module_cards {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 40px;
+
     .module_card {
       padding: 35px;
       width: 30%;
       height: 173px;
       border: 1px solid #ffde97;
-      filter: drop-shadow(0px 183px 73px rgba(78, 45, 0, 0.01))
-        drop-shadow(0px 103px 62px rgba(78, 45, 0, 0.03))
-        drop-shadow(0px 46px 46px rgba(78, 45, 0, 0.05))
-        drop-shadow(0px 11px 25px rgba(78, 45, 0, 0.06))
-        drop-shadow(0px 0px 0px rgba(78, 45, 0, 0.06));
+      filter: drop-shadow(0px 183px 73px rgba(78, 45, 0, 0.01)) drop-shadow(0px 103px 62px rgba(78, 45, 0, 0.03)) drop-shadow(0px 46px 46px rgba(78, 45, 0, 0.05)) drop-shadow(0px 11px 25px rgba(78, 45, 0, 0.06)) drop-shadow(0px 0px 0px rgba(78, 45, 0, 0.06));
       border-radius: 15px;
       display: flex;
       flex-direction: column;
       gap: 22px;
       justify-content: center;
+
       .module_heading {
         display: flex;
         justify-content: space-between;
+
         h2 {
           font-style: normal;
           font-weight: 700;
@@ -405,14 +437,17 @@ header {
           text-transform: capitalize;
           color: #828282;
         }
+
         .dur {
           display: flex;
           height: fit-content;
           align-items: center;
           gap: 4px;
+
           img {
             margin-top: 2px;
           }
+
           h3 {
             font-style: normal;
             font-weight: 500;
@@ -422,6 +457,7 @@ header {
           }
         }
       }
+
       h1 {
         font-style: normal;
         font-weight: 900;
@@ -432,6 +468,7 @@ header {
     }
   }
 }
+
 .sub_hero {
   background: url("assets/images/illustration_3.svg");
   background-color: #27ae60;
@@ -454,7 +491,7 @@ header {
     align-items: center;
   }
 
-  div > button {
+  div>button {
     font-family: "Manrope";
     width: max(20vw, 15rem);
     padding: 1.2rem;
@@ -499,6 +536,7 @@ header {
       }
     }
   }
+
   .more_info {
     font-family: "Roboto";
     font-weight: 900;
@@ -507,6 +545,7 @@ header {
     color: rgba(79, 79, 79, 1);
     margin: 5vh;
   }
+
   div {
     button {
       font-family: "Manrope";
@@ -532,14 +571,17 @@ header {
     text-transform: capitalize;
     color: #2f80ed;
   }
+
   .curriculum_card {
     margin-top: 20px;
+
     .curriculum_img {
       img {
         text-align: end;
         width: 100%;
       }
     }
+
     .curriculum_text {
       display: flex;
       flex-direction: column;
@@ -548,6 +590,7 @@ header {
     }
   }
 }
+
 .curriculum_heading {
   h1 {
     text-align: left;
@@ -557,6 +600,7 @@ header {
     font-size: 40px;
     line-height: 28px;
     color: #bdbdbd;
+
     span {
       font-weight: 600;
       font-size: 32px;
@@ -564,6 +608,7 @@ header {
     }
   }
 }
+
 .curriculum_para {
   font-style: normal;
   font-weight: 400;
@@ -571,6 +616,7 @@ header {
   line-height: 120%;
   color: #000000;
 }
+
 .certificate_section {
   margin-top: 180px;
   width: 100%;
@@ -579,15 +625,18 @@ header {
   align-items: center;
   text-align: center;
   gap: 80px;
-  img{
+
+  img {
     width: 100%;
   }
+
   .text {
     display: flex;
     flex-direction: column;
     gap: 20px;
 
     text-align: center;
+
     h1 {
       font-style: normal;
       font-weight: 900;
@@ -595,6 +644,7 @@ header {
       line-height: 48px;
       color: #f9c146;
     }
+
     p {
       font-style: normal;
       font-weight: 400;
@@ -605,6 +655,7 @@ header {
     }
   }
 }
+
 @media (max-width: 730px) {
   nav {
     div {
@@ -624,12 +675,14 @@ header {
       background-repeat: no-repeat;
       border-radius: 20px;
     }
+
     .mobile_content {
       margin-top: 35px;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 35px;
+
       p {
         font-family: "Roboto";
         font-style: normal;
@@ -644,24 +697,29 @@ header {
 
   .banner_content {
     gap: 25px;
+
     h2 {
       font-size: 28px;
     }
+
     .icons_section {
       flex-direction: column;
       align-items: start;
       gap: 10px;
+
       .icons {
         img {
           margin-left: 5px;
         }
       }
+
       p {
         font-size: 16px;
         display: flex;
         margin-left: 5px;
       }
     }
+
     p {
       display: none;
     }
@@ -676,6 +734,7 @@ header {
     align-items: center;
     padding-top: 3vh;
   }
+
   .banner_buttons {
     display: none;
   }
@@ -684,6 +743,7 @@ header {
     font-size: 16px;
     padding: 10px 20px;
   }
+
   .red_btn {
     font-size: 24px;
     gap: 3.5px;
@@ -696,14 +756,17 @@ header {
   .about_card_default_props {
     gap: 10px;
     justify-content: center;
+
     h2 {
       font-size: 20px;
     }
+
     p {
       font-size: 14px;
       line-height: 18px;
     }
   }
+
   .about_section {
     div {
       :first-child {
@@ -711,14 +774,17 @@ header {
           @extend .about_card;
           @extend .about_card_default_props;
           background-color: #f9c146;
+
           .line {
             background-color: #fff;
             width: 60%;
             height: 2px;
           }
+
           div {
             h3 {
               font-size: 16px;
+
               span {
                 font-size: 24px;
               }
@@ -726,12 +792,14 @@ header {
           }
         }
       }
+
       :nth-child(2) {
         div {
           @extend .about_card;
           @extend .about_card_default_props;
           height: 250px;
           background-color: #2f80ed;
+
           .line {
             background-color: #fff;
             width: 60%;
@@ -739,12 +807,14 @@ header {
           }
         }
       }
+
       :nth-child(3) {
         div {
           @extend .about_card;
           height: 250px;
           gap: 20px;
           padding: 10px;
+
           p {
             width: 100%;
             font-size: 14px;
@@ -753,21 +823,26 @@ header {
       }
     }
   }
+
   .about_course_section {
     margin-top: 100px;
+
     div {
       .about_course_section_content {
         height: fit-content;
         text-align: center;
+
         h1 {
           font-size: 28px;
           height: fit-content;
         }
+
         p {
           font-size: 14px;
           line-height: 130%;
         }
       }
+
       div {
         img {
           margin-top: 25px;
@@ -782,9 +857,11 @@ header {
     height: 220px;
     padding: 30px;
     gap: 10px;
+
     h1 {
       font-size: 20px;
     }
+
     p {
       font-size: 14px;
     }
@@ -792,21 +869,26 @@ header {
 
   .addon_course_section {
     margin-top: 80px;
+
     div {
       .addon_course_section_content {
         height: 327px;
         gap: 0px;
+
         h1 {
           font-size: 20px;
         }
+
         p {
           font-size: 14px;
           line-height: 17px;
         }
+
         button {
           display: none;
         }
       }
+
       .addonn_img_section {
         .addonn_img {
           height: 327px;
@@ -814,6 +896,7 @@ header {
         }
       }
     }
+
     .mobile_button {
       display: flex;
       width: 100%;
@@ -826,36 +909,44 @@ header {
   .module_section {
     margin-top: 80px;
     gap: 30px;
+
     h1 {
       font-size: 28px;
       line-height: 120%;
     }
+
     .module_cards {
       gap: 10px;
+
       .module_card {
         width: 48%;
         height: 105px;
         padding: 20px 17px;
         border-radius: 10px;
         gap: 13px;
+
         .module_heading {
           h2 {
             font-size: 14px;
             line-height: 31px;
           }
+
           .dur {
             display: flex;
             height: fit-content;
             align-items: center;
             gap: 4px;
+
             img {
               margin-top: 2px;
             }
+
             h3 {
               font-size: 14px;
             }
           }
         }
+
         h1 {
           font-size: 16px;
         }
@@ -865,12 +956,15 @@ header {
 
   .curriculum {
     gap: 40px;
+
     h1 {
       font-size: 28px;
       line-height: 34px;
     }
+
     .curriculum_card {
       margin-top: 0px;
+
       .curriculum_text {
         display: flex;
         flex-direction: column;
@@ -879,16 +973,19 @@ header {
       }
     }
   }
+
   .curriculum_heading {
     h1 {
       text-align: center;
       font-size: 32px;
       line-height: 20px;
+
       span {
         font-size: 20px;
       }
     }
   }
+
   .curriculum_para {
     font-size: 14px;
     text-align: center;
@@ -897,11 +994,14 @@ header {
   .certificate_section {
     margin-top: 80px;
     gap: 40px;
+
     .text {
       gap: 15px;
-        h1 {
+
+      h1 {
         font-size: 28px;
       }
+
       p {
         font-size: 14px;
         line-height: 17px;
