@@ -21,7 +21,6 @@ nav {
 nav div {
   display: flex;
   gap: 22px;
-  height: -moz-fit-content;
   height: fit-content;
   align-items: center;
 }
@@ -60,7 +59,6 @@ nav div .login_button {
 header .banner {
   background: url("/assets/images/banner.svg");
   width: 100%;
-  height: -moz-fit-content;
   height: fit-content;
   background-size: contain;
   background-position: center;
@@ -84,7 +82,6 @@ header .mobile_content {
 }
 .banner_content .icons_section {
   display: flex;
-  height: -moz-fit-content;
   height: fit-content;
   align-items: end;
 }
@@ -143,7 +140,6 @@ header .mobile_content {
   text-transform: capitalize;
   color: #ee2631;
   display: flex;
-  height: -moz-fit-content;
   height: fit-content;
   align-items: center;
   gap: 3.5px;
@@ -191,7 +187,6 @@ header .mobile_content {
 .about_section div :first-child div div {
   display: flex;
   flex-direction: row;
-  height: -moz-fit-content;
   height: fit-content;
   text-align: center;
   color: #fff5e7;
@@ -255,8 +250,7 @@ header .mobile_content {
 }
 .about_course_section div div img {
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .addon_course_section {
@@ -293,8 +287,7 @@ header .mobile_content {
 }
 .addon_course_section div .addonn_img_section .addonn_img {
   height: 445px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .addon_course_section .mobile_button {
   display: none;
@@ -376,7 +369,6 @@ header .mobile_content {
 }
 .module_section .module_cards .module_card .module_heading .dur {
   display: flex;
-  height: -moz-fit-content;
   height: fit-content;
   align-items: center;
   gap: 4px;
@@ -682,13 +674,11 @@ header .mobile_content {
     margin-top: 100px;
   }
   .about_course_section div .about_course_section_content {
-    height: -moz-fit-content;
     height: fit-content;
     text-align: center;
   }
   .about_course_section div .about_course_section_content h1 {
     font-size: 28px;
-    height: -moz-fit-content;
     height: fit-content;
   }
   .about_course_section div .about_course_section_content p {
@@ -761,7 +751,6 @@ header .mobile_content {
   }
   .module_section .module_cards .module_card .module_heading .dur {
     display: flex;
-    height: -moz-fit-content;
     height: fit-content;
     align-items: center;
     gap: 4px;
@@ -817,4 +806,61 @@ header .mobile_content {
     font-size: 14px;
     line-height: 17px;
   }
+}
+#faq {
+  --border-bottom: hsla(0, 0%, 0%, 0.2);
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+#faq h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#faq ul {
+  list-style: none;
+  padding: 0;
+}
+#faq .accordion .accordion-item {
+  border: none;
+  border-bottom: 1px solid var(--border-bottom);
+}
+#faq .accordion button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2em 1em 1em 0.2em;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: inherit;
+  border: none;
+}
+#faq .accordion button:hover, #faq .accordion button:focus {
+  cursor: pointer;
+}
+#faq .accordion button .icon {
+  --_size: 1.25rem;
+  width: var(--_size);
+}
+#faq .accordion button .icon img {
+  width: 100%;
+}
+#faq .accordion button[aria-expanded=true] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+#faq .accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  padding-left: 1rem;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+#faq .accordion .accordion-content p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 2em 0;
 }/*# sourceMappingURL=styles.css.map */
