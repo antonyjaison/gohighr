@@ -1,0 +1,58 @@
+#footer {
+    background-color: hsl(357, 85%, 54%);
+    padding: 2rem 1rem 0;
+
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .logo {
+        padding: 2rem 0 1.5rem 0;
+    }
+
+    .link {
+        padding-bottom: 1.5rem;
+
+        a {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.4em;
+
+            .text {
+                max-width: 25ch;
+            }
+
+            .email {
+                transform: translateX(-15%);
+            }
+        }
+    }
+
+    .copyright {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em 0.8em 1em;
+        border-top: 1px solid white;
+        color: white;
+
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 0.5rem;
+            padding: 0;
+            align-items: center;
+        }
+
+        @media (max-width: 450px) {
+            flex-direction: column-reverse;
+            font-size: 0.9rem;
+
+        }
+    }
+
+
+
+
+}
