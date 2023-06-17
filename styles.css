@@ -909,4 +909,90 @@ header .mobile_content {
     flex-direction: column-reverse;
     font-size: 0.9rem;
   }
+}
+
+.modal {
+  --modal-duration: 1s;
+  --modal-color: white;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal h2 {
+  text-align: center;
+  color: hsl(41, 94%, 63%);
+  font-weight: bolder;
+}
+.modal .modal-content {
+  margin: 3rem auto;
+  margin-bottom: 1rem;
+  max-width: 600px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+  padding: 2rem 1rem;
+  border-radius: 1.25rem;
+}
+@media (max-width: 600px) {
+  .modal .modal-content {
+    margin: 3rem 1rem;
+  }
+}
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.modal form {
+  margin-top: 1rem;
+}
+.modal form .input-icon-group {
+  position: relative;
+  width: 80%;
+  margin: 0 auto 1rem auto;
+}
+.modal form .input-icon-group input {
+  width: 100%;
+  background-color: #F2F2F2;
+  padding: 1rem 1rem;
+  border-radius: 1.25rem;
+  border: none;
+  font-size: 1.25rem;
+}
+.modal form .input-icon-group img {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-100%);
+}
+.modal form .input-icon-group .error-msg {
+  opacity: 1;
+  font-size: 0.8rem;
+  color: red;
+  margin-top: 0.3rem;
+}
+.modal form .input-check-group {
+  font-size: 0.8rem;
+  width: fit-content;
+  margin: 0 auto;
+}
+.modal form button {
+  display: block;
+  margin: 1rem auto;
+  padding: 1em 1.5em;
+  background-color: hsl(357, 85%, 54%);
+  color: white;
+  font-weight: 700;
+  border: none;
+  min-width: 12rem;
+  border-radius: 100vmin;
 }/*# sourceMappingURL=styles.css.map */
