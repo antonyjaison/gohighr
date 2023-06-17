@@ -29,3 +29,31 @@ function toggleAccordion() {
 }
 
 items.forEach(item => item.addEventListener('click', toggleAccordion));
+
+
+// Modals
+
+
+const modal = document.querySelector('#my-modal');
+const modalBtn = document.querySelector('.modal-btn');
+
+// Events
+modalBtn.addEventListener('click', openModal);
+window.addEventListener('click', outsideClick);
+
+// Open
+function openModal() {
+  modal.style.display = 'block';
+}
+
+// Close
+function closeModal() {
+  modal.style.display = 'none';
+}
+
+// Close If Outside Click
+function outsideClick(e) {
+  if (e.target == modal) {
+    modal.style.display = 'none';
+  }
+}

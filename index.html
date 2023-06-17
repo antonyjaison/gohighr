@@ -55,7 +55,7 @@
             </div>
 
             <div class="banner_buttons">
-              <button class="btn_ gohighr_btn">Submit your application</button>
+              <button class="btn_ gohighr_btn modal-btn">Submit your application</button>
               <button class="btn_ red_btn">
                 <img
                   src="/assets/icons/download_red_icon.svg"
@@ -626,6 +626,39 @@
             </ul>
           </div>
     </footer>
+
+    <section id="my-modal" class="modal">
+      <div class="modal-content">
+    
+    
+        <h2>Get Your Copy</h2>
+    
+        <form>
+          <div class="input-icon-group no-error">
+            <input type="text" name="name" id="name">
+            <img class="input-icon" src="./assets/icons/email_gray.svg" alt="email-icon">
+          </div>
+          <form>
+            <div class="input-icon-group has-error">
+              <input type="text" name="email" id="email">
+              <span class="error-msg">Email Id is Required *</span>
+              <img class="input-icon" src="./assets/icons/email_gray.svg" alt="email-icon">
+            </div>
+            <div class="input-icon-group has-error">
+              <input type="text" name="email" id="email">
+              <span class="error-msg">Phone Number is Required *</span>
+              <img class="input-icon" src="./assets/icons/email_gray.svg" alt="email-icon">
+            </div>
+            <div class="input-check-group">
+              <input checked="checked" type="checkbox" id="whatsapp-agree" name="whatsapp-agree">
+              <label for="whatsapp-agree">I agree to receive WhatsApp Messages on this number</label>
+            </div>
+    
+            <button type="submit">Submit</button>
+          </form>
+    
+      </div>
+    </section>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
