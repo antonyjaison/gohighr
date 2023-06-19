@@ -33,10 +33,12 @@ nav {
     }
 
     .submit_button {
-      background: linear-gradient(97.12deg,
-          #0028d0 1.93%,
-          #ee2631 53.52%,
-          #fbd240 100%);
+      background: linear-gradient(
+        97.12deg,
+        #0028d0 1.93%,
+        #ee2631 53.52%,
+        #fbd240 100%
+      );
       border-radius: 50px;
       font-style: normal;
       font-weight: 700;
@@ -53,16 +55,21 @@ nav {
       font-size: 16px;
       letter-spacing: 0.253657px;
       text-transform: capitalize;
-      border: 1px solid linear-gradient(96.86deg,
+      border: 1px solid
+        linear-gradient(
+          96.86deg,
           #0075ff -5.29%,
           #ee2631 49.29%,
-          #fbd240 98.46%);
+          #fbd240 98.46%
+        );
       border-radius: 50px;
       padding: 10px 20px;
-      background: linear-gradient(96.86deg,
-          #0075ff -5.29%,
-          #ee2631 49.29%,
-          #fbd240 98.46%);
+      background: linear-gradient(
+        96.86deg,
+        #0075ff -5.29%,
+        #ee2631 49.29%,
+        #fbd240 98.46%
+      );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -152,6 +159,11 @@ header {
   text-transform: capitalize;
   color: #ffffff;
   padding: 10px 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gohighr_btn:hover {
+  transform: translateY(-3.5px);
 }
 
 .red_btn {
@@ -369,6 +381,7 @@ header {
   flex-direction: column;
   justify-content: space-evenly;
   padding: 45px;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 
   h1 {
     font-style: normal;
@@ -389,6 +402,10 @@ header {
   }
 }
 
+.course_details_content:hover {
+  box-shadow: 12px 12px 0px 1px #90856c;
+  transform: translate(-3px, -3px);
+}
 // module section
 .module_section {
   margin-top: 180px;
@@ -412,19 +429,18 @@ header {
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 40px;
-
     .module_card {
       padding: 35px;
       width: 30%;
       height: 173px;
       border: 1px solid #ffde97;
-      filter: drop-shadow(0px 183px 73px rgba(78, 45, 0, 0.01)) drop-shadow(0px 103px 62px rgba(78, 45, 0, 0.03)) drop-shadow(0px 46px 46px rgba(78, 45, 0, 0.05)) drop-shadow(0px 11px 25px rgba(78, 45, 0, 0.06)) drop-shadow(0px 0px 0px rgba(78, 45, 0, 0.06));
       border-radius: 15px;
       display: flex;
       flex-direction: column;
       gap: 22px;
       justify-content: center;
-
+      cursor: pointer;
+      transition: 0.1s;
       .module_heading {
         display: flex;
         justify-content: space-between;
@@ -465,6 +481,10 @@ header {
         line-height: 100%;
         color: #f47066;
       }
+    }
+    .module_card:hover {
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     }
   }
 }
@@ -541,7 +561,7 @@ header {
   gap: 80px;
 
   img {
-    width: 100%;
+    width: 50%;
   }
 
   .text {
