@@ -55,14 +55,18 @@ nav {
       font-size: 16px;
       letter-spacing: 0.253657px;
       text-transform: capitalize;
-      border: 1px solid
-        linear-gradient(
-          96.86deg,
-          #0075ff -5.29%,
-          #ee2631 49.29%,
-          #fbd240 98.46%
-        );
+
       border-radius: 50px;
+      border: 1px solid;
+      border-image: linear-gradient(
+          97.12deg,
+          #0028d0 1.93%,
+          #ee2631 53.52%,
+          #fbd240 100%
+        )
+        1;
+      border-image-slice: 100%;
+
       padding: 10px 20px;
       background: linear-gradient(
         96.86deg,
@@ -92,7 +96,6 @@ header {
     display: none;
   }
 }
-
 .banner_content {
   display: flex;
   flex-direction: column;
@@ -495,8 +498,9 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 80px;
+  margin-top: 180px;
 
-  h1 {
+  .curriculum_title {
     font-style: normal;
     font-weight: 900;
     font-size: 40px;
@@ -504,6 +508,7 @@ header {
     text-align: center;
     text-transform: capitalize;
     color: #2f80ed;
+    width: 800px;
   }
 
   .curriculum_card {
@@ -590,12 +595,96 @@ header {
   }
 }
 
+@media (max-width: 1400px) {
+  .banner_content {
+    gap: 15px;
+    h2 {
+      font-size: 38px;
+    }
+    .icons_section {
+      img {
+        margin-left: 2px;
+      }
+    }
+  }
+  .banner_section {
+    height: 500px;
+  }
+}
+@media (max-width: 1200px) {
+  .banner_content {
+    h2 {
+      font-size: 32px;
+    }
+  }
+  .gohighr_btn {
+    font-size: 14px;
+    width: 300px;
+  }
+  .banner_buttons {
+    display: flex;
+    align-items: center;
+  }
+  .red_btn {
+    font-size: 16px;
+    width: 300px;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .module_section {
+    .module_cards {
+      gap: 15px;
+
+      .module_card {
+        width: 48%;
+        height: 105px;
+        padding: 20px 17px;
+        border-radius: 10px;
+        gap: 13px;
+
+        .module_heading {
+          h2 {
+            font-size: 14px;
+            line-height: 31px;
+          }
+
+          .dur {
+            // display: flex;
+            // height: fit-content;
+            // align-items: center;
+            // gap: 4px;
+
+            // img {
+            //   margin-top: 2px;
+            // }
+
+            h3 {
+              font-size: 14px;
+            }
+          }
+        }
+
+        h1 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
 @media (max-width: 730px) {
   nav {
     div {
       .submit_button {
         font-size: 14px;
         padding: 7px 15px;
+      }
+      .download_button {
+        display: none;
+      }
+      .login_button {
+        display: none;
       }
     }
   }
@@ -891,7 +980,8 @@ header {
   .curriculum {
     gap: 40px;
 
-    h1 {
+    .curriculum_title {
+      width: fit-content;
       font-size: 28px;
       line-height: 34px;
     }
