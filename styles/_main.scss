@@ -33,10 +33,12 @@ nav {
     }
 
     .submit_button {
-      background: linear-gradient(97.12deg,
-          #0028d0 1.93%,
-          #ee2631 53.52%,
-          #fbd240 100%);
+      background: linear-gradient(
+        97.12deg,
+        #0028d0 1.93%,
+        #ee2631 53.52%,
+        #fbd240 100%
+      );
       border-radius: 50px;
       font-style: normal;
       font-weight: 700;
@@ -53,16 +55,25 @@ nav {
       font-size: 16px;
       letter-spacing: 0.253657px;
       text-transform: capitalize;
-      border: 1px solid linear-gradient(96.86deg,
-          #0075ff -5.29%,
-          #ee2631 49.29%,
-          #fbd240 98.46%);
+
       border-radius: 50px;
+      border: 1px solid;
+      border-image: linear-gradient(
+          97.12deg,
+          #0028d0 1.93%,
+          #ee2631 53.52%,
+          #fbd240 100%
+        )
+        1;
+      border-image-slice: 100%;
+
       padding: 10px 20px;
-      background: linear-gradient(96.86deg,
-          #0075ff -5.29%,
-          #ee2631 49.29%,
-          #fbd240 98.46%);
+      background: linear-gradient(
+        96.86deg,
+        #0075ff -5.29%,
+        #ee2631 49.29%,
+        #fbd240 98.46%
+      );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -85,7 +96,6 @@ header {
     display: none;
   }
 }
-
 .banner_content {
   display: flex;
   flex-direction: column;
@@ -152,6 +162,11 @@ header {
   text-transform: capitalize;
   color: #ffffff;
   padding: 10px 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gohighr_btn:hover {
+  transform: translateY(-3.5px);
 }
 
 .red_btn {
@@ -369,6 +384,7 @@ header {
   flex-direction: column;
   justify-content: space-evenly;
   padding: 45px;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 
   h1 {
     font-style: normal;
@@ -389,6 +405,10 @@ header {
   }
 }
 
+.course_details_content:hover {
+  box-shadow: 12px 12px 0px 1px #90856c;
+  transform: translate(-3px, -3px);
+}
 // module section
 .module_section {
   margin-top: 180px;
@@ -412,19 +432,18 @@ header {
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 40px;
-
     .module_card {
       padding: 35px;
       width: 30%;
       height: 173px;
       border: 1px solid #ffde97;
-      filter: drop-shadow(0px 183px 73px rgba(78, 45, 0, 0.01)) drop-shadow(0px 103px 62px rgba(78, 45, 0, 0.03)) drop-shadow(0px 46px 46px rgba(78, 45, 0, 0.05)) drop-shadow(0px 11px 25px rgba(78, 45, 0, 0.06)) drop-shadow(0px 0px 0px rgba(78, 45, 0, 0.06));
       border-radius: 15px;
       display: flex;
       flex-direction: column;
       gap: 22px;
       justify-content: center;
-
+      cursor: pointer;
+      transition: 0.1s;
       .module_heading {
         display: flex;
         justify-content: space-between;
@@ -466,91 +485,9 @@ header {
         color: #f47066;
       }
     }
-  }
-}
-
-.sub_hero {
-  background: url("assets/images/illustration_3.svg");
-  background-color: #27ae60;
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-  border-radius: 20px;
-  padding: 2vw 10vw;
-
-  div {
-    font-family: "Roboto";
-    font-weight: 900;
-    font-style: normal;
-    font-size: 3em;
-    color: #fff;
-    text-align: center;
-    padding: 1vw 0vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  div>button {
-    font-family: "Manrope";
-    width: max(20vw, 15rem);
-    padding: 1.2rem;
-  }
-}
-
-.technologies {
-  margin-top: 10vh;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  .header {
-    font-family: "Roboto";
-    font-weight: 900;
-    font-style: normal;
-    font-size: 3em;
-    color: #27ae60;
-  }
-
-  .tech_cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2vw;
-    margin-top: 5vh;
-
-    .card {
-      width: max(5vw, 5em);
-      height: max(5vw, 5em);
-      background-color: #27ae60;
-      border-radius: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      img {
-        width: 50%;
-        height: 50%;
-      }
-    }
-  }
-
-  .more_info {
-    font-family: "Roboto";
-    font-weight: 900;
-    font-style: normal;
-    font-size: 1.8em;
-    color: rgba(79, 79, 79, 1);
-    margin: 5vh;
-  }
-
-  div {
-    button {
-      font-family: "Manrope";
-      width: max(20vw, 15rem);
-      padding: 1.2rem;
+    .module_card:hover {
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     }
   }
 }
@@ -561,8 +498,9 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 80px;
+  margin-top: 180px;
 
-  h1 {
+  .curriculum_title {
     font-style: normal;
     font-weight: 900;
     font-size: 40px;
@@ -570,6 +508,7 @@ header {
     text-align: center;
     text-transform: capitalize;
     color: #2f80ed;
+    width: 800px;
   }
 
   .curriculum_card {
@@ -627,7 +566,7 @@ header {
   gap: 80px;
 
   img {
-    width: 100%;
+    width: 50%;
   }
 
   .text {
@@ -656,12 +595,96 @@ header {
   }
 }
 
+@media (max-width: 1400px) {
+  .banner_content {
+    gap: 15px;
+    h2 {
+      font-size: 38px;
+    }
+    .icons_section {
+      img {
+        margin-left: 2px;
+      }
+    }
+  }
+  .banner_section {
+    height: 500px;
+  }
+}
+@media (max-width: 1200px) {
+  .banner_content {
+    h2 {
+      font-size: 32px;
+    }
+  }
+  .gohighr_btn {
+    font-size: 14px;
+    width: 300px;
+  }
+  .banner_buttons {
+    display: flex;
+    align-items: center;
+  }
+  .red_btn {
+    font-size: 16px;
+    width: 300px;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .module_section {
+    .module_cards {
+      gap: 15px;
+
+      .module_card {
+        width: 48%;
+        height: 105px;
+        padding: 20px 17px;
+        border-radius: 10px;
+        gap: 13px;
+
+        .module_heading {
+          h2 {
+            font-size: 14px;
+            line-height: 31px;
+          }
+
+          .dur {
+            // display: flex;
+            // height: fit-content;
+            // align-items: center;
+            // gap: 4px;
+
+            // img {
+            //   margin-top: 2px;
+            // }
+
+            h3 {
+              font-size: 14px;
+            }
+          }
+        }
+
+        h1 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
 @media (max-width: 730px) {
   nav {
     div {
       .submit_button {
         font-size: 14px;
         padding: 7px 15px;
+      }
+      .download_button {
+        display: none;
+      }
+      .login_button {
+        display: none;
       }
     }
   }
@@ -957,7 +980,8 @@ header {
   .curriculum {
     gap: 40px;
 
-    h1 {
+    .curriculum_title {
+      width: fit-content;
       font-size: 28px;
       line-height: 34px;
     }
