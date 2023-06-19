@@ -47,8 +47,10 @@ nav div .login_button {
   font-size: 16px;
   letter-spacing: 0.253657px;
   text-transform: capitalize;
-  border: 1px solid linear-gradient(96.86deg, #0075ff -5.29%, #ee2631 49.29%, #fbd240 98.46%);
   border-radius: 50px;
+  border: 1px solid;
+  border-image: linear-gradient(97.12deg, #0028d0 1.93%, #ee2631 53.52%, #fbd240 100%) 1;
+  border-image-slice: 100%;
   padding: 10px 20px;
   background: linear-gradient(96.86deg, #0075ff -5.29%, #ee2631 49.29%, #fbd240 98.46%);
   -webkit-background-clip: text;
@@ -130,6 +132,11 @@ header .mobile_content {
   text-transform: capitalize;
   color: #ffffff;
   padding: 10px 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gohighr_btn:hover {
+  transform: translateY(-3.5px);
 }
 
 .red_btn {
@@ -303,6 +310,7 @@ header .mobile_content {
   flex-direction: column;
   justify-content: space-evenly;
   padding: 45px;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 .course_details_content h1 {
   font-style: normal;
@@ -319,6 +327,11 @@ header .mobile_content {
   line-height: 130%;
   text-transform: capitalize;
   color: #7b5a11;
+}
+
+.course_details_content:hover {
+  box-shadow: 12px 12px 0px 1px #90856c;
+  transform: translate(-3px, -3px);
 }
 
 .module_section {
@@ -348,12 +361,13 @@ header .mobile_content {
   width: 30%;
   height: 173px;
   border: 1px solid #ffde97;
-  filter: drop-shadow(0px 183px 73px rgba(78, 45, 0, 0.01)) drop-shadow(0px 103px 62px rgba(78, 45, 0, 0.03)) drop-shadow(0px 46px 46px rgba(78, 45, 0, 0.05)) drop-shadow(0px 11px 25px rgba(78, 45, 0, 0.06)) drop-shadow(0px 0px 0px rgba(78, 45, 0, 0.06));
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   gap: 22px;
   justify-content: center;
+  cursor: pointer;
+  transition: 0.1s;
 }
 .module_section .module_cards .module_card .module_heading {
   display: flex;
@@ -390,6 +404,9 @@ header .mobile_content {
   line-height: 100%;
   color: #f47066;
 }
+.module_section .module_cards .module_card:hover {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
 
 .curriculum {
   width: 100%;
@@ -397,8 +414,9 @@ header .mobile_content {
   flex-direction: column;
   align-items: center;
   gap: 80px;
+  margin-top: 180px;
 }
-.curriculum h1 {
+.curriculum .curriculum_title {
   font-style: normal;
   font-weight: 900;
   font-size: 40px;
@@ -406,6 +424,7 @@ header .mobile_content {
   text-align: center;
   text-transform: capitalize;
   color: #2f80ed;
+  width: 800px;
 }
 .curriculum .curriculum_card {
   margin-top: 20px;
@@ -453,7 +472,7 @@ header .mobile_content {
   gap: 80px;
 }
 .certificate_section img {
-  width: 100%;
+  width: 50%;
 }
 .certificate_section .text {
   display: flex;
@@ -477,10 +496,69 @@ header .mobile_content {
   max-width: 666px;
 }
 
+@media (max-width: 1400px) {
+  .banner_content {
+    gap: 15px;
+  }
+  .banner_content h2 {
+    font-size: 38px;
+  }
+  .banner_content .icons_section img {
+    margin-left: 2px;
+  }
+  .banner_section {
+    height: 500px;
+  }
+}
+@media (max-width: 1200px) {
+  .banner_content h2 {
+    font-size: 32px;
+  }
+  .gohighr_btn {
+    font-size: 14px;
+    width: 300px;
+  }
+  .banner_buttons {
+    display: flex;
+    align-items: center;
+  }
+  .red_btn {
+    font-size: 16px;
+    width: 300px;
+  }
+}
+@media (max-width: 992px) {
+  .module_section .module_cards {
+    gap: 15px;
+  }
+  .module_section .module_cards .module_card {
+    width: 48%;
+    height: 105px;
+    padding: 20px 17px;
+    border-radius: 10px;
+    gap: 13px;
+  }
+  .module_section .module_cards .module_card .module_heading h2 {
+    font-size: 14px;
+    line-height: 31px;
+  }
+  .module_section .module_cards .module_card .module_heading .dur h3 {
+    font-size: 14px;
+  }
+  .module_section .module_cards .module_card h1 {
+    font-size: 20px;
+  }
+}
 @media (max-width: 730px) {
   nav div .submit_button {
     font-size: 14px;
     padding: 7px 15px;
+  }
+  nav div .download_button {
+    display: none;
+  }
+  nav div .login_button {
+    display: none;
   }
   header .banner {
     background: url("/assets/images/banner_mobile.svg");
@@ -691,7 +769,8 @@ header .mobile_content {
   .curriculum {
     gap: 40px;
   }
-  .curriculum h1 {
+  .curriculum .curriculum_title {
+    width: fit-content;
     font-size: 28px;
     line-height: 34px;
   }
@@ -765,6 +844,7 @@ header .mobile_content {
 #faq .accordion button .icon {
   --_size: 1.25rem;
   width: var(--_size);
+  min-width: var(--_size);
 }
 #faq .accordion button .icon img {
   width: 100%;
@@ -799,6 +879,9 @@ header .mobile_content {
 }
 #footer .logo {
   padding: 2rem 0 1.5rem 0;
+}
+#footer .footer-details {
+  padding-left: clamp(1em, 4vw, 4em);
 }
 #footer .link {
   padding-bottom: 1.5rem;
@@ -852,9 +935,11 @@ header .mobile_content {
   text-align: center;
   color: hsl(41, 94%, 63%);
   font-weight: bolder;
+  margin-bottom: 2rem;
+  letter-spacing: -1px;
 }
 .modal .modal-content {
-  margin: 3rem auto;
+  margin: 1rem auto;
   margin-bottom: 1rem;
   max-width: 600px;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
@@ -868,21 +953,10 @@ header .mobile_content {
     margin: 3rem 1rem;
   }
 }
-@keyframes modalopen {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.modal form {
-  margin-top: 1rem;
-}
 .modal form .input-icon-group {
   position: relative;
   width: 80%;
-  margin: 0 auto 1rem auto;
+  margin: 0 auto 1.5rem auto;
 }
 .modal form .input-icon-group input {
   width: 100%;
@@ -892,24 +966,53 @@ header .mobile_content {
   border: none;
   font-size: 1.25rem;
 }
-.modal form .input-icon-group img {
+.modal form .input-icon-group input[name=phone] {
+  padding: 1rem 1rem 1rem 9rem;
+}
+.modal form .input-icon-group img.input-icon {
   position: absolute;
   right: 5%;
   top: 50%;
   transform: translateY(-100%);
 }
+.modal form .input-icon-group select#country_code {
+  background-color: transparent;
+  border: none;
+  font-size: 0.9rem;
+  position: absolute;
+  top: 24%;
+  left: 4%;
+}
 .modal form .input-icon-group .error-msg {
-  opacity: 1;
+  opacity: 0;
   font-size: 0.8rem;
   color: red;
-  margin-top: 0.3rem;
+  transform: translateY(5px);
+}
+.modal form .input-icon-group.no-error {
+  margin-bottom: 2.8rem;
+}
+.modal form .input-icon-group.no-error img {
+  transform: translateY(-50%);
 }
 .modal form .input-check-group {
   font-size: 0.8rem;
   width: fit-content;
   margin: 0 auto;
 }
-.modal form button {
+.modal .success {
+  display: none;
+}
+.modal .success .tick-icon {
+  display: block;
+  margin: 2rem auto;
+}
+.modal .success p {
+  text-align: center;
+  max-width: 40ch;
+  margin: 1rem auto;
+}
+.modal .btn {
   display: block;
   margin: 1rem auto;
   padding: 1em 1.5em;
@@ -919,6 +1022,14 @@ header .mobile_content {
   border: none;
   min-width: 12rem;
   border-radius: 100vmin;
+}
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .sub_hero {
@@ -1089,6 +1200,4 @@ header .mobile_content {
   .mentor-card .card-body .container .card-text:nth-child(2) {
     font-weight: 400;
   }
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

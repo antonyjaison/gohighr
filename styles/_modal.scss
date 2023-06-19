@@ -1,5 +1,4 @@
 .modal {
-
     --modal-duration: 1s;
     --modal-color: white;
 
@@ -17,10 +16,12 @@
         text-align: center;
         color: hsla(41, 94%, 63%, 1);
         font-weight: bolder;
+        margin-bottom: 2rem;
+        letter-spacing: -1px;
     }
 
     .modal-content {
-        margin: 3rem auto;
+        margin: 1rem auto;
         margin-bottom: 1rem;
         max-width: 600px;
         box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
@@ -34,29 +35,13 @@
         .modal-content {
             margin: 3rem 1rem;
         }
-    }
-
-
-
-
-    @keyframes modalopen {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
-    }
+    }   
 
     form {
-
-        margin-top: 1rem;
-
         .input-icon-group {
             position: relative;
             width: 80%;
-            margin: 0 auto 1rem auto;
+            margin: 0 auto 1.5rem auto;
 
             input {
                 width: 100%;
@@ -67,21 +52,40 @@
                 font-size: 1.25rem;
             }
 
-            img {
+            input[name=phone]{
+                padding: 1rem 1rem 1rem 9rem;
+            }
+
+            img.input-icon {
                 position: absolute;
                 right: 5%;
                 top: 50%;
                 transform: translateY(-100%);
             }
 
-            .error-msg {
-                opacity: 1;
-                font-size: 0.8rem;
-                color: red;
-                margin-top: 0.3rem;
+            select#country_code{
+                background-color: transparent;
+                border: none;
+                font-size: 0.9rem;
+                position: absolute;
+                top: 24%;
+                left: 4%;
             }
 
-            &.error {}
+            .error-msg {
+                opacity: 0;
+                font-size: 0.8rem;
+                color: red;
+                transform: translateY(5px);
+            }
+
+            &.no-error {
+                img {
+                    transform: translateY(-50%);
+                }
+
+                margin-bottom: 2.8rem;
+            }
         }
 
         .input-check-group {
@@ -89,24 +93,41 @@
             width: fit-content;
             margin: 0 auto;
         }
-
-        button {
-            display: block;
-            margin: 1rem auto;
-            padding: 1em 1.5em;
-            background-color: hsl(357, 85%, 54%);
-            color: white;
-            font-weight: 700;
-            border: none;
-            min-width: 12rem;
-            border-radius: 100vmin;
-
-        }
-
-
     }
 
-    // img {
-    //     background-color: red;
-    // }
+    .success{
+        display: none;
+        .tick-icon{
+            display: block;
+            margin: 2rem auto;
+        }
+
+        p{
+            text-align: center;
+            max-width: 40ch;
+            margin: 1rem auto;
+        }
+    }
+
+    .btn {
+        display: block;
+        margin: 1rem auto;
+        padding: 1em 1.5em;
+        background-color: hsl(357, 85%, 54%);
+        color: white;
+        font-weight: 700;
+        border: none;
+        min-width: 12rem;
+        border-radius: 100vmin;
+    }
+
+    @keyframes modalopen {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
 }
