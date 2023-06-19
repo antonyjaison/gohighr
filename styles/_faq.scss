@@ -18,9 +18,6 @@
         .accordion-item {
             border: none;
             border-bottom: 1px solid var(--border-bottom);
-
-
-
         }
 
         button {
@@ -42,20 +39,15 @@
             .icon {
                 --_size: 1.25rem;
                 width: var(--_size);
+                min-width: var(--_size);
 
                 img {
                     width: 100%;
                 }
             }
-
-
-
-
         }
 
         button[aria-expanded='true'] {
-
-
             +.accordion-content {
                 opacity: 1;
                 max-height: 9em;
@@ -68,7 +60,6 @@
             opacity: 0;
             max-height: 0;
             overflow: hidden;
-
             padding-left: 1rem;
             transition: opacity 200ms linear, max-height 200ms linear;
             will-change: opacity, max-height;

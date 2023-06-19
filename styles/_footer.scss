@@ -2,7 +2,6 @@
     background-color: hsl(357, 85%, 54%);
     padding: 2rem 1rem 0;
 
-
     a {
         color: white;
         text-decoration: none;
@@ -10,6 +9,10 @@
 
     .logo {
         padding: 2rem 0 1.5rem 0;
+    }
+
+    .footer-details{
+        padding-left: clamp(1em, 4vw, 4em);
     }
 
     .link {
@@ -51,8 +54,4 @@
 
         }
     }
-
-
-
-
 }

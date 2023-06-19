@@ -18,11 +18,11 @@
       <img src="/assets/images/logo.svg" alt="Gohighr" />
 
       <div>
-        <button class="btn_ d-none d-sm-block download_button">
+        <button data-target-modal="get-copy-modal" class="btn_ d-none d-sm-block download_button modal-btn">
           <img src="/assets/icons/download_icon.svg" alt="download icon" />
           Download Brochure
         </button>
-        <button class="btn_ submit_button">Submit your application</button>
+        <button class="btn_ submit_button modal-btn" data-target-modal="submit-application-modal">Submit your application</button>
         <button class="btn_ d-none d-sm-block login_button">Login</button>
       </div>
     </nav>
@@ -55,8 +55,8 @@
             </div>
 
             <div class="banner_buttons">
-              <button class="btn_ gohighr_btn modal-btn">Submit your application</button>
-              <button class="btn_ red_btn">
+              <button data-target-modal="submit-application-modal"  class="btn_ gohighr_btn modal-btn">Submit your application</button>
+              <button data-target-modal="get-copy-modal" class="btn_ red_btn modal-btn">
                 <img
                   src="/assets/icons/download_red_icon.svg"
                   alt="download icon"
@@ -75,7 +75,7 @@
           as a full-stack developer with guaranteed job placement.
         </p>
         <button class="btn gohighr_btn">Submit your application</button>
-        <button class="btn red_btn">
+        <button class="btn red_btn modal-btn" data-target-modal="">
           <img src="/assets/icons/download_red_icon.svg" alt="download icon" />
           Download Brochure
         </button>
@@ -210,7 +210,7 @@
             building, and LinkedIn outreach. These skills will enhance your
             profile and increase your chances of success in the IT industry.
           </p>
-          <button class="btn_ gohighr_btn">Submit Your Application</button>
+          <button data-target-modal="submit-application-modal" class="btn_ gohighr_btn modal-btn">Submit Your Application</button>
         </div>
         <div class="col-lg-5 col-6 addonn_img_section">
           <img
@@ -221,7 +221,7 @@
         </div>
       </div>
       <div class="mobile_button">
-        <button class="btn_ gohighr_btn">Submit Your Application</button>
+        <button data-target-modal="submit-application-modal" class="btn_ gohighr_btn modal-btn">Submit Your Application</button>
       </div>
     </section>
 
@@ -485,7 +485,7 @@
         </div>
       </div>
 
-      <button class="btn_ gohighr_btn">Submit your application</button>
+      <button data-target-modal="submit-application-modal" class="btn_ gohighr_btn modal-btn">Submit your application</button>
     </section>
 
     <section class="certificate_section">
@@ -500,6 +500,7 @@
       <img src="/assets//images/certificate.svg" alt="certificate" />
     </section>
 
+    <!-- FAQ section -->
     <section role="faq" id="faq">
       <div class="container">
         <h2>Frequently Asked Questions</h2>
@@ -593,9 +594,11 @@
         </div>
       </div>
     </section>
-    
+
+
+    <!-- Footer Section -->
     <footer id="footer">
-      <div class="container">
+      <div class="footer-details">
         <div class="logo">
             <img src="./assets/images/Gohighr.png" alt="logo">
             </div>
@@ -627,35 +630,87 @@
           </div>
     </footer>
 
-    <section id="my-modal" class="modal">
+    <!-- Get Copy Model -->
+    <section id="get-copy-modal" class="modal">
       <div class="modal-content">
-    
-    
-        <h2>Get Your Copy</h2>
-    
-        <form>
+        
+        <form id="get-copy-form">
+          <h2>Get Your Copy</h2>
           <div class="input-icon-group no-error">
-            <input type="text" name="name" id="name">
+            <input placeholder="Name *" type="text" name="name" id="name">
             <img class="input-icon" src="./assets/icons/email_gray.svg" alt="email-icon">
           </div>
           <form>
             <div class="input-icon-group has-error">
-              <input type="text" name="email" id="email">
-              <span class="error-msg">Email Id is Required *</span>
+              <input placeholder="Email" type="text" name="email" id="email">
+              <div class="error-msg">Email Id is Required *</div>
               <img class="input-icon" src="./assets/icons/email_gray.svg" alt="email-icon">
             </div>
             <div class="input-icon-group has-error">
-              <input type="text" name="email" id="email">
-              <span class="error-msg">Phone Number is Required *</span>
-              <img class="input-icon" src="./assets/icons/email_gray.svg" alt="email-icon">
+              <input type="text" name="phone" id="phone">
+              <div class="error-msg">Phone Number is Required *</div>
+              <img class="input-icon" src="./assets/icons/phone.svg" alt="email-icon">
+              <select name="country_code" id="country_code">
+                <!-- Options for country and mobile code in js -->
+              </select>
             </div>
             <div class="input-check-group">
-              <input checked="checked" type="checkbox" id="whatsapp-agree" name="whatsapp-agree">
-              <label for="whatsapp-agree">I agree to receive WhatsApp Messages on this number</label>
+              <input checked="checked" type="checkbox" id="whatsapp_agree" name="whatsapp_agree">
+              <label for="whatsapp_agree">I agree to receive WhatsApp Messages on this number</label>
             </div>
     
-            <button type="submit">Submit</button>
+            <button class="btn" type="submit">Submit</button>
           </form>
+          
+          <div class="success">
+            <h2>Copy Sent</h2>
+            <img class="tick-icon" src="./assets/icons/green-tick.svg" alt="tick-icon">
+            <p>The copy of brochure will be sent to your email</p>
+            <button class="btn close-btn">Finish</button>
+          </div>
+    
+      </div>
+    </section>
+
+    <!-- Submit Application Modal -->
+    <section id="submit-application-modal" class="modal">
+      <div class="modal-content">
+        
+        <form id="submit-application-form">
+          <h2>Submit Your Application</h2>
+          <div class="input-icon-group no-error">
+            <input placeholder="Name *" type="text" name="name" id="name">
+            <img class="input-icon" src="./assets/icons/email_gray.svg" alt="email-icon">
+          </div>
+          <form>
+            <div class="input-icon-group has-error">
+              <input placeholder="Email" type="text" name="email" id="email">
+              <div class="error-msg">Email Id is Required *</div>
+              <img class="input-icon" src="./assets/icons/email_gray.svg" alt="email-icon">
+            </div>
+            <div class="input-icon-group has-error">
+              <select name="country_code" id="country_code">
+                <!-- Options for country and mobile code in js -->
+              </select>
+              <input type="text" name="phone" id="phone">
+              <div class="error-msg">Phone Number is Required *</div>
+              <img class="input-icon" src="./assets/icons/phone.svg" alt="email-icon">
+              
+            </div>
+            <div class="input-check-group">
+              <input checked="checked" type="checkbox" id="whatsapp_agree" name="whatsapp_agree">
+              <label for="whatsapp_agree">I agree to receive WhatsApp Messages on this number</label>
+            </div>
+    
+            <button class="btn" type="submit">Next</button>
+          </form>
+          
+          <div class="success">
+            <h2>Application Submitted</h2>
+            <img class="tick-icon" src="./assets/icons/green-tick.svg" alt="tick-icon">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad eius exercitationem asperiores iure ipsam nulla numquam hic nesciunt optio ut?</p>
+            <button class="btn close-btn">Finish</button>
+          </div>
     
       </div>
     </section>
@@ -665,6 +720,7 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="/country_code.js"></script>
     <script src="/script.js"></script>
   </body>
 </html>

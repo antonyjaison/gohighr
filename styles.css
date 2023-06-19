@@ -841,6 +841,7 @@ header .mobile_content {
 #faq .accordion button .icon {
   --_size: 1.25rem;
   width: var(--_size);
+  min-width: var(--_size);
 }
 #faq .accordion button .icon img {
   width: 100%;
@@ -875,6 +876,9 @@ header .mobile_content {
 }
 #footer .logo {
   padding: 2rem 0 1.5rem 0;
+}
+#footer .footer-details {
+  padding-left: clamp(1em, 4vw, 4em);
 }
 #footer .link {
   padding-bottom: 1.5rem;
@@ -928,9 +932,11 @@ header .mobile_content {
   text-align: center;
   color: hsl(41, 94%, 63%);
   font-weight: bolder;
+  margin-bottom: 2rem;
+  letter-spacing: -1px;
 }
 .modal .modal-content {
-  margin: 3rem auto;
+  margin: 1rem auto;
   margin-bottom: 1rem;
   max-width: 600px;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
@@ -944,21 +950,10 @@ header .mobile_content {
     margin: 3rem 1rem;
   }
 }
-@keyframes modalopen {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.modal form {
-  margin-top: 1rem;
-}
 .modal form .input-icon-group {
   position: relative;
   width: 80%;
-  margin: 0 auto 1rem auto;
+  margin: 0 auto 1.5rem auto;
 }
 .modal form .input-icon-group input {
   width: 100%;
@@ -968,24 +963,53 @@ header .mobile_content {
   border: none;
   font-size: 1.25rem;
 }
-.modal form .input-icon-group img {
+.modal form .input-icon-group input[name=phone] {
+  padding: 1rem 1rem 1rem 9rem;
+}
+.modal form .input-icon-group img.input-icon {
   position: absolute;
   right: 5%;
   top: 50%;
   transform: translateY(-100%);
 }
+.modal form .input-icon-group select#country_code {
+  background-color: transparent;
+  border: none;
+  font-size: 0.9rem;
+  position: absolute;
+  top: 24%;
+  left: 4%;
+}
 .modal form .input-icon-group .error-msg {
-  opacity: 1;
+  opacity: 0;
   font-size: 0.8rem;
   color: red;
-  margin-top: 0.3rem;
+  transform: translateY(5px);
+}
+.modal form .input-icon-group.no-error {
+  margin-bottom: 2.8rem;
+}
+.modal form .input-icon-group.no-error img {
+  transform: translateY(-50%);
 }
 .modal form .input-check-group {
   font-size: 0.8rem;
   width: fit-content;
   margin: 0 auto;
 }
-.modal form button {
+.modal .success {
+  display: none;
+}
+.modal .success .tick-icon {
+  display: block;
+  margin: 2rem auto;
+}
+.modal .success p {
+  text-align: center;
+  max-width: 40ch;
+  margin: 1rem auto;
+}
+.modal .btn {
   display: block;
   margin: 1rem auto;
   padding: 1em 1.5em;
@@ -995,4 +1019,12 @@ header .mobile_content {
   border: none;
   min-width: 12rem;
   border-radius: 100vmin;
+}
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=styles.css.map */
