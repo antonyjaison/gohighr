@@ -76,8 +76,8 @@
           JavaScript, and other top technologies, and secure a promising career
           as a full-stack developer with guaranteed job placement.
         </p>
-        <button class="btn gohighr_btn">Submit your application</button>
-        <button class="btn red_btn modal-btn" data-target-modal="">
+        <button data-target-modal="submit-application-modal"  class="btn_ gohighr_btn modal-btn">Submit your application</button>
+        <button data-target-modal="get-copy-modal" class="btn_ red_btn modal-btn">
           <img src="/assets/icons/download_red_icon.svg" alt="download icon" />
           Download Brochure
         </button>
@@ -580,24 +580,36 @@
     <footer id="footer">
       <div class="footer-details">
 
-        <div class="logo">
-            <img src="./assets/images/Gohighr.png" alt="logo">
+        <div class="row">
+          <div class="col-lg-7">
+
+            <div class="logo">
+                <img src="./assets/images/Gohighr.png" alt="logo">
             </div>
-          <div class="link">
+            <div class="link">
+                <a href="#">
+                  <img src="/assets/icons/location.png" alt="location-icon">
+                  <p class="text">175 & 176, Bannerghatta
+                    Main Rd, Dollars Colony,
+                    Bengaluru, Karnataka
+                    560076, India</p>
+                </a>
+            </div>
+              <div class="link">
+                <a href="#">
+                  <img class="email" src="./assets/icons/email.png" alt="email-icon">
+                  <p class="text">gohighr</p>
+                </a>
+              </div>
+          </div>
+          <div class="col-lg-5 terms_link p-4">
             <a href="#">
-              <img src="./assets/icons/location.png" alt="location-icon">
-              <p class="text">175 & 176, Bannerghatta
-                Main Rd, Dollars Colony,
-                Bengaluru, Karnataka
-                560076, India</p>
+              Terms and conditions <br>Privacy Policy
             </a>
           </div>
-          <div class="link">
-            <a href="#">
-              <img class="email" src="./assets/icons/email.png" alt="email-icon">
-              <p class="text">gohighr</p>
-            </a>
-          </div>
+        </div>
+
+          
           </div>
           <div class="copyright">
             <p>Copyright &copy; 2023 gohighr. All rights reserved</p>

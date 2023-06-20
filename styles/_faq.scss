@@ -1,74 +1,78 @@
 #faq {
-    --border-bottom: hsla(0, 0%, 0%, 0.2);
+  --border-bottom: hsla(0, 0%, 0%, 0.2);
 
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 
-    h2 {
-        text-align: center;
-        margin-bottom: 2rem;
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .accordion {
+    .accordion-item {
+      border: none;
+      border-bottom: 1px solid var(--border-bottom);
     }
 
-    ul {
-        list-style: none;
-        padding: 0;
+    button {
+        text-align:left ;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 2em 1em 1em 0.2em;
+      font-size: 1rem;
+      font-weight: 500;
+      background-color: inherit;
+      border: none;
+
+      &:hover,
+      &:focus {
+        cursor: pointer;
+      }
+
+      .icon {
+        --_size: 1.25rem;
+        width: var(--_size);
+        min-width: var(--_size);
+        transition: 200ms;
+        img {
+          width: 100%;
+        }
+      }
     }
 
-    .accordion {
-        .accordion-item {
-            border: none;
-            border-bottom: 1px solid var(--border-bottom);
-        }
-
-        button {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            padding: 2em 1em 1em 0.2em;
-            font-size: 1rem;
-            font-weight: 500;
-            background-color: inherit;
-            border: none;
-
-            &:hover,
-            &:focus {
-                cursor: pointer;
-            }
-
-            .icon {
-                --_size: 1.25rem;
-                width: var(--_size);
-                min-width: var(--_size);
-
-                img {
-                    width: 100%;
-                }
-            }
-        }
-
-        button[aria-expanded='true'] {
-            +.accordion-content {
-                opacity: 1;
-                max-height: 9em;
-                transition: all 200ms linear;
-                will-change: opacity, max-height;
-            }
-        }
-
-        .accordion-content {
-            opacity: 0;
-            max-height: 0;
-            overflow: hidden;
-            padding-left: 1rem;
-            transition: opacity 200ms linear, max-height 200ms linear;
-            will-change: opacity, max-height;
-
-            p {
-                font-size: 1rem;
-                font-weight: 300;
-                margin: 2em 0;
-            }
-        }
+    button[aria-expanded="true"] {
+      + .accordion-content {
+        opacity: 1;
+        max-height: 9em;
+        transition: all 200ms linear;
+        will-change: opacity, max-height;
+      }
+      .icon {
+        transform: rotateZ(45deg);
+      }
     }
+
+    .accordion-content {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      padding-left: 1rem;
+      transition: opacity 200ms linear, max-height 200ms linear;
+      will-change: opacity, max-height;
+
+      p {
+        font-size: 1rem;
+        font-weight: 300;
+        margin: 2em 0;
+      }
+    }
+  }
 }
